@@ -1,7 +1,7 @@
 :root {
     --max-width: 1000px;
     --accent: #0070f3;
-    --bg: #f5f5f7;
+    --bg: #e5e5e5;   /* replace this with the exact grey from the logo */
     --text: #111;
   }
   
@@ -14,7 +14,7 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: var(--text);
-    background: var(--bg);
+    background: var(--bg); /* Entire site uses the same grey */
     line-height: 1.6;
   }
   
@@ -26,8 +26,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #fff;
-    border-bottom: 1px solid #eaeaea;
+    background: var(--bg);
+    border-bottom: 1px solid #ccc;
     z-index: 10;
   }
   
@@ -50,7 +50,6 @@
   .hero {
     text-align: center;
     padding: 6rem 2rem 4rem;
-    background: linear-gradient(180deg, #fff, var(--bg));
   }
   
   .hero h1 {
@@ -103,7 +102,7 @@
     background: #fff;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
   }
   
@@ -165,8 +164,7 @@
   footer {
     text-align: center;
     padding: 2rem;
-    border-top: 1px solid #eaeaea;
-    background: #fff;
+    border-top: 1px solid #ccc;
     margin-top: 4rem;
   }
   
