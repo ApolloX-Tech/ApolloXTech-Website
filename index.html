@@ -2,101 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ApolloX Tech</title>
-  <meta name="description" content="ApolloX Tech – Building the future of digital foreign exchange." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ApolloXTech — Licensed Digital FX</title>
+  <meta name="description" content="ApolloXTech — compliance-first, dual-rail digital FX infrastructure." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Display font (SOL-style big letters) + clean UI font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP + ScrollTrigger for SOL-like motion; SplitType for character reveals -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://unpkg.com/split-type"></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <img src="logo.png" alt="ApolloX Tech Logo" class="logo">
-    <nav>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__left">
+      <img src="logo.png" alt="ApolloXTech Logo" class="logo" />
+      <span class="brand">ApolloXTech</span>
+    </div>
+    <nav class="nav__links">
       <a href="#about">About</a>
       <a href="#platform">Platform</a>
+      <a href="#reg">Regulatory</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="cta">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section class="hero">
-    <h1>Building the Future of Digital FX</h1>
-    <p>Secure, transparent, and compliant cross-border currency flows for the world.</p>
-    <a href="#about" class="btn">Learn More</a>
+    <h1 class="hero__title split">
+      Licensed&nbsp;Digital&nbsp;FX<br />
+      For&nbsp;A&nbsp;Borderless&nbsp;World
+    </h1>
+    <p class="hero__sub">
+      Secure, transparent, and compliant cross-border currency flows — built for consumers,
+      businesses, and regulators.
+    </p>
+    <div class="hero__cta">
+      <a href="#about" class="btn">What we do</a>
+      <a href="#contact" class="btn btn--ghost">Talk to us</a>
+    </div>
   </section>
 
   <main>
-    <!-- About -->
+    <!-- ABOUT (Problem / Solution) -->
     <section id="about" class="section">
-      <h2>About ApolloX</h2>
-      <p>
-        The UAE processes over <strong>$160B</strong> in annual foreign inflows, much of it through
-        informal FX dealers and outdated banking rails. ApolloX bridges licensed fiat infrastructure
-        with blockchain-inspired settlement rails to modernize inflows while meeting the highest
-        regulatory standards.
-      </p>
-    </section>
-
-    <!-- Platform -->
-    <section id="platform" class="section">
-      <h2>Our Platform</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>B2C Wallet</h3>
+      <h2 class="kicker">About</h2>
+      <div class="grid two">
+        <div class="block reveal">
+          <h3 class="display">The Problem</h3>
           <p>
-            Multi-currency wallet, transparent FX spreads, ATM integration, mobile-first,
-            multilingual.
+            Inflows across MENA and beyond move through informal FX dealers and outdated rails —
+            high fees, long delays, and low transparency. That means capital leakage and limited
+            oversight.
           </p>
         </div>
-        <div class="card">
-          <h3>B2B Settlement</h3>
+        <div class="block reveal">
+          <h3 class="display">Our Solution</h3>
           <p>
-            APIs for SMEs and corporates, stablecoin rails, tokenized regional currencies for instant FX.
+            ApolloX bridges licensed fiat infrastructure with modern settlement rails to digitize and
+            formalize inflows — delivering compliant, auditable FX with lower friction.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Roadmap -->
+    <!-- PLATFORM (B2C / B2B) -->
+    <section id="platform" class="section">
+      <h2 class="kicker">Platform</h2>
+      <div class="cards">
+        <article class="card reveal">
+          <h3 class="card__title">B2C — Multi-Currency Wallet</h3>
+          <ul class="pill-list">
+            <li>Hold, convert, withdraw</li>
+            <li>Transparent spreads</li>
+            <li>ATM integrations</li>
+            <li>Mobile-first · Arabic / English / French</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h3 class="card__title">B2B — Settlement Layer</h3>
+          <ul class="pill-list">
+            <li>APIs for payroll & invoices</li>
+            <li>Stablecoin settlement rails</li>
+            <li>Tokenized regional currencies</li>
+            <li>Instant, auditable conversions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- REGULATORY -->
+    <section id="reg" class="section">
+      <h2 class="kicker">Regulatory</h2>
+      <div class="grid two">
+        <div class="block reveal">
+          <h3 class="display">Compliance-First</h3>
+          <p>
+            EMI / Money Services / Payment Services licensing pathways, integrated AML/KYC,
+            bank-grade security, biometric login, and fraud monitoring.
+          </p>
+        </div>
+        <div class="block stat reveal">
+          <div class="stat__row">
+            <span class="stat__num" data-count-to="3">0</span>
+            <span class="stat__label">Core Licence Tracks</span>
+          </div>
+          <div class="stat__row">
+            <span class="stat__num" data-count-to="24">0</span>
+            <span class="stat__label">/7 Monitoring</span>
+          </div>
+          <div class="stat__row">
+            <span class="stat__num" data-count-to="100">0</span>
+            <span class="stat__label">% Audit-Ready Logs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
     <section id="roadmap" class="section">
-      <h2>Roadmap</h2>
-      <ul class="timeline">
-        <li><span>2026</span> UAE launch under regulatory sandbox.</li>
-        <li><span>2027</span> Expansion to Algeria, Morocco, Egypt, Tunisia.</li>
-        <li><span>2028–2030</span> Global scale into Europe & North America.</li>
-      </ul>
+      <h2 class="kicker">Roadmap</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="t__date">2026</span>
+          <span class="t__txt">Pilot in UAE under sandbox; ATM integration.</span>
+        </li>
+        <li class="reveal">
+          <span class="t__date">2027</span>
+          <span class="t__txt">Regional rollout across North Africa (EGP, MAD, DZD…)</span>
+        </li>
+        <li class="reveal">
+          <span class="t__date">2028–2030</span>
+          <span class="t__txt">Scale to Europe & North America diaspora corridors.</span>
+        </li>
+      </ol>
     </section>
 
-    <!-- Founder -->
+    <!-- FOUNDER -->
     <section id="founder" class="section">
-      <h2>Founder</h2>
-      <p>
-        <strong>Feriel Abdat</strong>, Canadian-Algerian entrepreneur with expertise in economics,
-        finance, and North African markets. Committed to building compliant fintech infrastructure
-        for global FX inflows.
-      </p>
+      <h2 class="kicker">Founder</h2>
+      <div class="founder reveal">
+        <h3 class="display">Feriel Abdat — Founder & CEO</h3>
+        <p>
+          Canadian-Algerian entrepreneur with a background in economics and global finance, focused on
+          modernizing access to legal, transparent FX across emerging and global markets.
+        </p>
+      </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>
-        Email us at <a href="mailto:feriel@apolloxtech.com">feriel@apolloxtech.com</a>
-      </p>
-      <form>
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+      <h2 class="kicker">Contact</h2>
+      <div class="grid two">
+        <div class="block reveal">
+          <p class="lead">Let’s build compliant, modern FX together.</p>
+          <p><a class="link" href="mailto:feriel@apolloxtech.com">feriel@apolloxtech.com</a></p>
+        </div>
+        <form class="form reveal" autocomplete="on">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <small>© <span id="year"></span> ApolloX Tech. All rights reserved.</small>
+  <footer class="footer">
+    <small>© <span id="year"></span> ApolloXTech. All rights reserved.</small>
   </footer>
 
   <script src="script.js"></script>
